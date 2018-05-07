@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>fusiu.com</title>
+</head>
+<body>
+<h3 th:text="${reportModel.title}">fusiu</h3>
+<select>
+    <option th:each="city : ${reportModel.cityList}"
+            th:value="${city.cityId}" th:text="${city.cityName}"
+            th:selected="${city.cityId eq reportModel.cityId}"></option>
+</select>
+</body>
+</html>

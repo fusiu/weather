@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.fusiu</groupId>
-	<artifactId>micro-weather-quartz</artifactId>
+	<artifactId>micro-weather-report</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>micro-weather-quartz</name>
+	<name>micro-weather-report</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -25,6 +25,12 @@
 	</properties>
 
 	<dependencies>
+		<!-- Tymeleaf begin -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- Tymeleaf end -->
 		<!-- report begin -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

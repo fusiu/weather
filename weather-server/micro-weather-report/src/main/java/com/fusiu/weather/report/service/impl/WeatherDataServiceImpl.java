@@ -75,6 +75,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
 
         String key = uri;
         String strBody = null;
+        // ObjectMapper 可以实现将 JSON 格式的数据转换成 bean
         ObjectMapper mapper = new ObjectMapper();
         WeatherResponse weatherResponse = null;
 
@@ -88,7 +89,6 @@ public class WeatherDataServiceImpl implements WeatherDataService {
             // 缓存没有，在调用服务接口来获取
             // 获取天气数据
             ResponseEntity<String> forEntity = restTemplate.getForEntity(uri, String.class);
-            // 将天气数据从 ResponseEntity 对象转换成 WeatherResponse 对象
             if (forEntity.getStatusCodeValue() == 200) {
                 strBody = forEntity.getBody();
             }
@@ -97,6 +97,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
             ops.set(key, strBody, TIME_OUT, TimeUnit.SECONDS);
         }
         try {
+            // 将天气数据从 ResponseEntity 对象转换成 WeatherResponse 对象
             weatherResponse = mapper.readValue(strBody, WeatherResponse.class);
         } catch (IOException e) {
             e.printStackTrace();
