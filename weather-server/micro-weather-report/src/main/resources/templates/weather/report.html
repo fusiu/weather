@@ -11,5 +11,13 @@
             th:value="${city.cityId}" th:text="${city.cityName}"
             th:selected="${city.cityId eq reportModel.cityId}"></option>
 </select>
+<div>
+    <h1 th:text="${reportModel.report.city}">城市名称</h1>
+    <div>
+        <p>
+            天气状态：<span th:text="${reportModel.report.aqi}">天气类型</span>
+        </p>
+    </div>
+</div>
 </body>
 </html>

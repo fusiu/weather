@@ -14,7 +14,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 /**
+ *
  * WeatherDataService 实现类
+ *
  */
 @Service
 public class WeatherDataServiceImpl implements WeatherDataService {
@@ -66,7 +68,7 @@ public class WeatherDataServiceImpl implements WeatherDataService {
     }
 
     /**
-     * 方法抽取，用于从天气接口获取数据
+     * 方法抽取，
      *
      * @param uri
      * @return

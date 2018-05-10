@@ -63,4 +63,5 @@ public class Weather implements Serializable{
     public void setForecast(List<Forecast> forecast) {
         this.forecast = forecast;
     }
+
 }
